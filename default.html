@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>App1</title>
+
+    <!-- WinJS-Verweise -->
+   
+    <link href="assets/css/ui-light.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/angular-material.css" rel="stylesheet" />
+    <link href="assets/css/fabric.components.min.css" rel="stylesheet" />
+    <link href="assets/css/fabric.min.css" rel="stylesheet" />
+    <script src="libs/base.js"></script>
+    <script src="libs/ui.js"></script>
+    
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-route.js"></script>
+    
+    <script src="libs/angular-animate.min.js"></script>
+    <script src="libs/angular.message.js"></script>
+    <script src="libs/angular-winjs.js"></script>
+    <script src="libs/angular-material.js"></script>
+    <script src="libs/angular-aria.js"></script>
+    <link href="assets/css/default.css" rel="stylesheet" />
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="app" style="background-color:#2b88d8">
+    <win-split-view-pane-toggle split-view="splitViewElement" ></win-split-view-pane-toggle>
+    <win-split-view id="splitView"  style="background-color:#2b88d8">
+        <win-split-view-pane  style="background-color:#2b88d8">
+            <win-split-view-command label="'Home'" icon="'home'" on-invoked="goToHome()"></win-split-view-command>
+            <win-split-view-command label="'Settings'" icon="'settings'" on-invoked="goToSettings()"></win-split-view-command>
+        </win-split-view-pane>
+        <win-split-view-content style="background-color:white" >
+            <div id="content-box" ng-view >
+                <div style="margin-left:35%;margin-top:25%">
+                    <img src="assets/images/wait.gif" />
+                </div>
+            </div>
+        </win-split-view-content>
+    </win-split-view>
+</body>
+</html>

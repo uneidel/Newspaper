@@ -1,0 +1,18 @@
+﻿<div style="margin-left:10px;">
+    <h1>{{Title}}</h1>
+    <hr />
+
+    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+                  md-row-height-gt-md="1:1" md-row-height="4:3"
+                  md-gutter="8px" md-gutter-gt-sm="4px">
+        <md-grid-tile ng-repeat="Feed in Feeds" style="background-color:#004578"
+                      md-rowspan="1"
+                      md-colspan="1"
+                      md-colspan-sm="1"
+                      ng-class="tile.background"
+                      ng-click="ShowFeed(Feed)">
+            <span style="font-size:48px;margin-top:-35px" class="glyphicon glyphicon-th-large"></span>
+            <md-grid-tile-footer style="background-color:#71AFE5"><h3>{{Feed.Title}}</h3></md-grid-tile-footer>
+        </md-grid-tile>
+    </md-grid-list>
+</div>

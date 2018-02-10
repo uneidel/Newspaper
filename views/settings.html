@@ -1,0 +1,35 @@
+﻿<h3>Settings</h3>
+<div class="col-sm-6">
+    <div class="ms-TextField">
+    <label class="ms-Label">FeedUrl:</label>
+    <input class="ms-TextField-field">
+    <span class="ms-TextField-description">Please enter a Feed Url:</span>
+     </div>
+    <button class="ms-Button">
+        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="ms-Button-label">Add Feed</span>
+        <span class="ms-Button-description">Enter a Url and press Add</span>
+    </button>
+</div>
+<div class="col-sm-12">
+    <div class="ms-Table">
+        <div class="ms-Table-row">
+            <span class="ms-Table-rowCheck"></span>
+            <span class="ms-Table-cell">Feed Title</span>
+            <span class="ms-Table-cell">Country</span>
+            <span class="ms-Table-cell">City</span>
+            <span class="ms-Table-cell">Category</span>
+
+        </div>
+        <div class="ms-Table-row" ng-repeat="Feed in Feeds">
+            <span class="ms-Table-rowCheck"></span>
+            <span class="ms-Table-cell">{{Feed.Title}}</span>
+            <span class="ms-Table-cell">{{Feed.Country}}</span>
+            <span class="ms-Table-cell">{{Feed.City}}</span>
+            <span class="ms-Table-cell">{{Feed.Category}}</span>
+            
+        </div>
+    </div>
+
+
+
